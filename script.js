@@ -36,7 +36,7 @@ $("button").on("click", function() {
             var textCard = $("<p>");
             textCard.text("Rating: " + response.data[0].rating.toUpperCase());
     
-            $("body").append(newImg, textCard);
+            $("#row").append(newImg, textCard);
 
 
             // newImage.attr("src", imageLink);
