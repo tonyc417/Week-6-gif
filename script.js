@@ -1,5 +1,20 @@
-// var newDiv = $("<div>");
-// var newText = $("<p>");
+var cardHead = document.getElementById("card");
+var submitChoice = document.getElementById("choice");
+var userText = document.getElementById("textField");
+
+var celeb = ["Kanye West", "Drake", "Adam Sandler", "Post Malone", "The Beatles", "Led Zeppelin", "Aerosmith", "Red Hot Chili Peppers"];
+
+for (var j = 0; j < celeb.length; j++) {
+    var newBtn = document.createElement("BUTTON");
+    newBtn.innerHTML = celeb[j];
+    var att = document.createAttribute("value");
+    att.value = celeb[j];
+    newBtn.setAttributeNode(att);
+    document.body.prepend(newBtn);
+    console.log(att);
+}
+
+
 
 $("button").on("click", function() {
     var catergory = $(this).val();
@@ -19,9 +34,9 @@ $("button").on("click", function() {
             newImg.attr("class", [i]);
         
             var textCard = $("<p>");
-            textCard.text("Rating: " + response.data[0].rating);
+            textCard.text("Rating: " + response.data[0].rating.toUpperCase());
     
-            $(".card").prepend(newImg, textCard);
+            $("body").append(newImg, textCard);
 
 
             // newImage.attr("src", imageLink);
