@@ -37,17 +37,12 @@ $("button").on("click", function() {
             textCard.text("Rating: " + response.data[0].rating.toUpperCase());
     
             $("#row").append(newImg, textCard);
-
-
-            // newImage.attr("src", imageLink);
-            // newImage.attr("class", [i]);
-            // $("#images").append(newImage);
         }
-        // var imageLink = response.data[0].images.fixed_width.url;
-        // newImage.attr("src", imageLink);
-        // $("#images").append(newImage);
         console.log(response);
     })
 })
 
-
+$("#choice").on("click", function() {
+    var createNew = $("<button>");
+    createNew.attr("value", );
+})
