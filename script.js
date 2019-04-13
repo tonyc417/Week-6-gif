@@ -37,18 +37,19 @@ parentButton.addEventListener("click", function(e) {
                 gifHold.className = "column";
                 var imageLink = response.data[i].images.fixed_width.url;
                 var static = imageLink.replace("200w.gif", "480w_s.jpg");
-                console.log(static);
 
-                var textCard = $("<p>");
-                textCard.text("Rating: ");
-                gifHold.append(textCard);
+                // gifHold.append(textCard);
 
                 var newImg = document.createElement("img");
                 newImg.src = static;
                 gifHold.append(newImg);
+                
+                var textCard = document.createElement("P");
+                textCard.innerText = "Rating: " + response.data[i].rating.toUpperCase();
+                gifHold.append(textCard);
 
                 $("#displayAll").append(gifHold);
-
+                
                 }
         })
     }
