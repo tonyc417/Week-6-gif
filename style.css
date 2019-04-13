@@ -10,6 +10,22 @@ img {
     border-radius: 5px 5px 0 0;
 } */
 
+.row::after {
+ content: "";
+ clear: both;
+ display: table;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+#parentBtn {
+  display: none;
+}
+
 .newChoice {
   margin-top: 200px;
   float: right;
@@ -22,16 +38,6 @@ button {
   color: white;
   margin-right: 20px;
   cursor: pointer;
-}
+} */
 
-#column {
-  float: left;
-  width: 33.33%;
-  padding: 5px;
-}
 
-#row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
